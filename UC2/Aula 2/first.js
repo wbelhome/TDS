@@ -31,7 +31,7 @@
 
 // Exercicio 2 
 
-const idade = 24
+const age = 24
 const ageText = idade.toString()
 console.log(typeof idade);
 console.log(typeof ageText);
