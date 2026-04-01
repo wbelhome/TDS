@@ -42,7 +42,9 @@ let typeIsStudent = typeof isStudent;
 // e armazene em backToString (numeroDeNovoString).
 
 let numberString = "100"
-let convertedNumber = numberString.toString()
+let convertedNumber = Number(numberString)
+let backToString = convertedNumber.toString()
+console.log(typeof backToString)
 
 
 // =========================
@@ -193,6 +195,9 @@ let isLessOrEqual = x <= y
 let isAdult = true
 let hasLicense = false
 let canDrive = (isAdult && hasLicense)
+let cannotDrive = (!canDrive)
+let canEnterParty = (isAdult || hasLicense)
+
 
 
 
@@ -223,5 +228,10 @@ let canDrive = (isAdult && hasLicense)
 // - Resolva na ordem correta
 // - Use parênteses para garantir a lógica correta
 
+let finalResult
 
+let part1 = ((10 + 5 ) * 2) > 20
+let part2 = ((30 / 3) === 10) || ((5*2) < 9) 
+
+finalResult = part1 && part2
 
