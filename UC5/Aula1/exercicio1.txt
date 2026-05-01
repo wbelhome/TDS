@@ -6,3 +6,22 @@ It is a glass of water
 We are very happy
 You are developers
 They are programmers
+
+
+I'm fine 
+You're beautiful
+He's a good teacher
+She's sick
+It's a glass of water
+We're very happy
+You're developers
+They're programmers
+
+I'm not fine 
+You're not beautiful
+He's not a good teacher
+She's not sick
+It's not a glass of water
+We're not very happy
+You're not developers
+They're not programmers

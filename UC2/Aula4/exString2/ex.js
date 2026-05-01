@@ -13,10 +13,9 @@
 //
 // Imprima tudo em uma única frase
 // =========================================
-
-
-
-
+// let nome = "William"
+// let idade = 27
+// console.log(`Meu nome é ${nome}, tenho ${idade} anos e gosto de programar!`)
 
 // =========================================
 // EXERCÍCIO 2

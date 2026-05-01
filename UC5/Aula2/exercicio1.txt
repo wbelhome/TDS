@@ -15,13 +15,54 @@ You are my classmates
 They are programmers
 They are my friends
 
-am
-is
-areare
-is
-is
-are
-am
-am
-is
+i am tired
+am i tired?
+i was tired
+i wasn't fine
+i will be a teacher
+i'll be a teacher
+i won't be not a teacher
 
+You are beautiful
+are you beautiful?
+You were beautiful
+You weren't beautiful
+You'll be great developers
+You won't great developers
+
+He is a good teacher
+is he a good doctor?
+he was a good doctor
+he wasn't a good doctor
+He will be the better student 
+He won't the better student
+
+She is my girlfriend
+is She my girlfriend?
+She was my girlfriend
+She wasn't my girlfriend
+She will be my girlfriend
+She won't be my girlfriend
+
+It is my dog
+is it my dog?
+It was my dog
+It wasn't my dog
+It will be so cool 
+It won't be so cool 
+
+We are very happy
+are We very happy?
+We were very happy
+We weren't very happy
+We will be graduate
+We won't be graduate
+We'll be graduate
+
+They are programmers
+are They programmers?
+They were programmers 
+They weren't programmers 
+They will be so fucking goat
+They'll be so fucking goat
+They won't be so fucking goat
