@@ -34,7 +34,7 @@ function buscarProdutoPorNome(nome, produtos){
     }
 }
 
-function mostrarProdutos(){
+function mostrarProdutos(produtos){
     if(produtos.length === 0){
         console.log("Nenhum produto cadastrado.")
     }else{
@@ -74,7 +74,14 @@ function main(){
             buscarProdutoPorNome(buscaNome, produtos)
         }
         else if(resposta === 4){
-            mostrarProdutos()
+            mostrarProdutos(produtos)
+        }
+        else if(resposta === 5){
+            console.log("Ok, até a proxima!")
+            break;
+        }
+        else{
+            console.log("Resposta invalida, por favor digite '1', '2', '3', '4' ou '5'.")
         }
     }  
 }
