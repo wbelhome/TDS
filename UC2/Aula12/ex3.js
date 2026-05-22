@@ -12,20 +12,20 @@ function cadastrarAluno(nome, nota1, nota2, nota3){
     console.log(`Aluno ${nome} cadastrado com sucesso!`)
 }
 
-function calcularMedia(buscaNome, alunos){
+function calcularMedia(media){
     for(let i = 0; i < alunos.length; i++){
-        if(alunos[i][0] === buscaNome){
+        if(alunos[i][0] === media){
             const media = (alunos[i][1] + alunos[i][2] + alunos[i][3]) / 3
             return media
         }
     }
 }
 
-function verificarSituacao(media){
-    if(media >= 7){
+function verificarSituacao(situacao){
+    if(situacao >= 7){
         return "Aprovado"
     }
-    else if(media >= 5 && 5 < 7){
+    else if(situacao >= 5 && 5 < 7){
         return "Recuperação"
     }
     else{
@@ -33,21 +33,19 @@ function verificarSituacao(media){
     }
 }
 
-function mostrarAlunos(buscaNome, alunos){
-    for(let i = 0; i < alunos.length; i++){
-        if(alunos[i][0] === buscaNome){
-            const media = calcularMedia(buscaNome, alunos);
-            const situacao = verificarSituacao(media)
-            console.log(`Aluno: ${buscaNome} \n
-                Notas: ${alunos[i][1]}, ${alunos[i][2]} e ${alunos[i][3]} \n
-                Média: ${media.toFixed(2)} \n
-                Situação: ${situacao} \n
-                `)
-                
-        }
-        else{
-            console.log(`${buscaNome} não encontrado`)
-        }
+function mostrarAlunos(){
+    if(alunos.length === 0){
+        console.log("Não há alunos cadastrados")
+    }
+    else{
+        alunos.forEach(aluno => {
+            console.log(`
+                    Aluno: ${aluno[0]} 
+                    Notas: ${aluno[1]}, ${aluno[2]} e ${aluno[3]}
+                    Média: ${calcularMedia(aluno[0])} 
+                    Situação: ${verificarSituacao(calcularMedia(aluno[0]))} 
+                    `)
+        })
     }
 }
 
@@ -58,6 +56,7 @@ function main(){
         1- Cadastrar aluno \n
         2- Mostrar alunos
         3- Sair \n`))
+
         if(resposta === 1){
             const nome = prompt.question("Digite o nome do aluno: ").toLowerCase()
             const nota1 = Number(prompt.question("Digite a primeira nota: "))
@@ -66,11 +65,10 @@ function main(){
             cadastrarAluno(nome, nota1, nota2, nota3)
         }
         else if(resposta === 2){
-            const buscaNome = prompt.question("Digite o nome do aluno: ").toLowerCase();
-            mostrarAlunos(buscaNome, alunos)
+            mostrarAlunos();
         }
         else if(resposta === 3){
-            console.log("Até a próxima! ")
+            console.log("Até a próxima! ");
             break
         }
     }

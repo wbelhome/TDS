@@ -1,6 +1,6 @@
 const prompt = require('readline-sync');
 
-let produtos = []
+const produtos = []
 
 function cadastrarProduto(id, nome, precoVenda, precoFabricacao, quantidadeEstoque){
     const produto = []
@@ -16,7 +16,7 @@ function cadastrarProduto(id, nome, precoVenda, precoFabricacao, quantidadeEstoq
     console.log(`Produto ${nome} cadastrado com sucesso!`)
 }
 
-function buscarProdutoPorId(id, produtos){
+function buscarProdutoPorId(id){
     const produto = produtos.find(p => p[0] === id)
     if(produto){
         console.log(`Produto encontrado: ID: ${produto[0]}, Nome: ${produto[1]}, Preço de Venda: R$${produto[2]}, Preço de Fabricação: R$${produto[3]}, Quantidade em Estoque: ${produto[4]}`)
@@ -25,7 +25,7 @@ function buscarProdutoPorId(id, produtos){
     }
 }
 
-function buscarProdutoPorNome(nome, produtos){
+function buscarProdutoPorNome(nome){
     const produto = produtos.find(p => p[1].toLowerCase() === nome.toLowerCase())
     if(produto){
         console.log(`Produto encontrado: ID: ${produto[0]}, Nome: ${produto[1]}, Preço de Venda: R$${produto[2]}, Preço de Fabricação: R$${produto[3]}, Quantidade em Estoque: ${produto[4]}`)
@@ -34,7 +34,7 @@ function buscarProdutoPorNome(nome, produtos){
     }
 }
 
-function mostrarProdutos(produtos){
+function mostrarProdutos(){
     if(produtos.length === 0){
         console.log("Nenhum produto cadastrado.")
     }else{
@@ -67,11 +67,11 @@ function main(){
         }
         else if(resposta === 2){
             const buscaId = Number(prompt.question("Digite o ID do produto que deseja buscar: "))
-            buscarProdutoPorId(buscaId, produtos)
+            buscarProdutoPorId(buscaId)
         }
         else if(resposta === 3){
             const buscaNome = prompt.question("Digite o nome do produto que deseja buscar: ").toLowerCase()
-            buscarProdutoPorNome(buscaNome, produtos)
+            buscarProdutoPorNome(buscaNome)
         }
         else if(resposta === 4){
             mostrarProdutos(produtos)
